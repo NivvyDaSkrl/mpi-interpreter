@@ -9,7 +9,7 @@ class MpiInterpreter::TransformerTest < Minitest::Test
   def test_it_does_something_useful
     parser = MpiInterpreter::Parser.new
     transformer = MpiInterpreter::Transformer.new
-    mpi = '{null:{if:{eq:{prop:_lockable?,here},yes},{clearflags}{store:pageus,_currstatus,here}{otell:The room is now set to Page us to join!,here,#-1},{tell:You can\'t set that flag in public areas.}}}'
+    mpi = ' {null:{if:{eq:{prop:_lockable?,here},yes},{clearflags}{store:pageus,_currstatus,here}{otell:The room is now set to Page us to join!,here,#-1},{tell:You can\'t set that flag in public areas.}}}'
     puts mpi
     puts '--------------------'
     ptree = parser.parse(mpi)
